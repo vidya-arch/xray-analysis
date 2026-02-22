@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: xray-analysis
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.11.0

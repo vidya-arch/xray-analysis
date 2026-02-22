@@ -2463,6 +2463,11 @@ def create_app():
 if __name__ == "__main__":
     print("Launching AI X-Ray Analysis System...")
     app = create_app()
-    port = int(os.environ.get("PORT", 7860))
-    app.launch(server_name="0.0.0.0", server_port=port)
+    port = int(os.environ.get("PORT", 10000))
+    app.launch(
+        server_name="0.0.0.0",
+        server_port=port,
+        share=False,
+        show_error=True
+    )
 
